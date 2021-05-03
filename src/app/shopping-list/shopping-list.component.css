@@ -1,0 +1,9 @@
+.shopping-list {
+  display: inline-block;
+  margin: 0 10px 0px 10px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}

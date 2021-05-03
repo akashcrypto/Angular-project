@@ -1,0 +1,35 @@
+<div class="container">
+  <div style="text-align: center">
+    <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+  </div>
+
+  <!-- <app-alert
+    [message]="errorMessage"
+    *ngIf="error"
+    (close)="closeEvent()"
+  ></app-alert> -->
+
+  <ng-template appPlaceHolder></ng-template>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm" *ngIf="!isLoading">
+    <label for="email"> Email </label>
+    <input id="email" type="text" name="email" ngModel required email />
+    <label for="password"> Password </label>
+    <input
+      id="password"
+      type="password"
+      name="password"
+      ngModel
+      required
+      minlength="8"
+    />
+    <div>
+      <button class="btn btn-primary" type="submit" [disabled]="!f.valid">
+        {{ isLoggedIn ? "Sign In" : "Sign Up" }}
+      </button>
+      <button class="btn btn-primary" (click)="onSwitchMode()" type="button">
+        Switch to {{ isLoggedIn ? "Sign Up" : "Sign In" }}
+      </button>
+    </div>
+  </form>
+</div>

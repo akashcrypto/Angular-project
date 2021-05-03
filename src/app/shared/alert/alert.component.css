@@ -1,0 +1,22 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(135, 145, 158, 0.493);
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+}
+
+.alert {
+  position: fixed;
+  top: 30vh;
+  left: 35vw;
+  width: 30vw;
+  padding: 16px;
+  background-color: white;
+}
+
+.alert-close {
+  text-align: right;
+}

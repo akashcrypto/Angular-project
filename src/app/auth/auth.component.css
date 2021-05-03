@@ -1,0 +1,27 @@
+.container {
+  margin: 10% 0 0 0;
+}
+
+form {
+  width: 60%;
+  margin: auto;
+}
+
+label {
+  font-weight: bold;
+  margin: 0px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  margin: 0 10px 0 0;
+}

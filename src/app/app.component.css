@@ -1,0 +1,12 @@
+.contain {
+  margin: 60px 150px 0px 150px;
+  width: auto;
+}
+
+app-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}

@@ -1,0 +1,61 @@
+<div class="container">
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+    <div>
+      <button
+        class="btn btn-success"
+        type="submit"
+        [disabled]="!recipeForm.valid"
+      >
+        Save
+      </button>
+      <button class="btn btn-danger" type="button" (click)="onCancle()">
+        Cancle
+      </button>
+    </div>
+    <hr />
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" formControlName="name" />
+
+    <label for="image">Image Path</label>
+    <input type="text" id="imagepath" formControlName="imagePath" #imagePath />
+
+    <div class="im">
+      <img [src]="imagePath.value" />
+    </div>
+
+    <label for="image">Description</label>
+    <textarea
+      rows="3"
+      id="description"
+      formControlName="description"
+    ></textarea>
+
+    <div formArrayName="ingredients">
+      <div
+        class="row"
+        *ngFor="let ingredientctrl of getControls(); let i = index"
+        [formGroupName]="i"
+      >
+        <div class="col-md-8">
+          <input type="text" formControlName="name" />
+        </div>
+        <div class="col-md-2">
+          <input type="number" formControlName="amount" />
+        </div>
+        <div class="col-md-2">
+          <button
+            class="btn btn-danger"
+            type="button"
+            (click)="onDeleteIndredient(i)"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <hr />
+      <button class="btn btn-success" type="button" (click)="onAddIngredient()">
+        Add Ingredient
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,40 @@
+.container {
+  padding: 0px 60px 15px 60px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  margin: 0 10px 0 0;
+}
+
+.col-md-2 .btn {
+  margin: 11px 0px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.im {
+  height: 200px;
+  width: 80%;
+  overflow: hidden;
+  border: 0px;
+}
+
+img {
+  object-fit: cover;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
